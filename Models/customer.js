@@ -18,7 +18,15 @@ const orderSchema= new Schema({
 })
 
 const customerSchema= new Schema({
-    
+
+ name:String,
+ orders:[
+    {
+        type:Schema.Types.ObjectId,
+        ref:"Order",
+    }
+ ]
+
 
 })
 
